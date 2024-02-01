@@ -1,39 +1,46 @@
 import { FcGoogle } from "react-icons/fc";
 import { FaFacebookF } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import toast, { Toaster } from "react-hot-toast";
 import Navbar from "../Navbar/Navbar";
+import { MdError } from "react-icons/md";
 
-const Signup = () => {
-  const {signUp, googleSignUp, updateProfileInfo} = useContext(AuthContext);
-  const navigate = useNavigate();
-  // signup functionality
-
-  const handleSignUp = (e) => {
-    e.preventDefault();
-    const name = e.target.name.value;
-    const email = e.target.email.value;
-    const password = e.target.password.value;
-    console.log(email, name, password);
+const Signin = () => {
+    const [loginError, setLoginError] = useState("");
+    const { login, googleSignUp } = useContext(AuthContext);
+    const navigate = useNavigate();
   
-    const toastId = toast.loading("Signing up...");
-  
-    signUp(email, password)
-      .then((result) => {
-        console.log(result.user);
-        updateProfileInfo(name)
-          .then(() => {
-            if (result.user) {
-              toast.success("Signed up successfully.", { id: toastId });
-              navigate(location?.state ? location.state : "/");
-            }
-          })
-          .catch((error) => console.log(error));
-      })
-      .catch((error) => console.log(error));
-  };
+    const handleLogin = (e) => {
+      e.preventDefault();
+      const form = new FormData(e.currentTarget);
+      const email = form.get("email");
+      const password = form.get("password");
+      console.log(email, password);
+      const toastId = toast.loading("Signing In...");
+      login(email, password)
+        .then((result) => {
+          console.log(result.user);
+          if (result.user?.email) {
+            toast.dismiss(toastId);
+            toast.success("Signed in successfully.", { id: toastId });
+            navigate(location?.state ? location.state : "/");
+          }
+          navigate("/");
+        })
+        .catch((error) => {
+          console.error(error);
+          setLoginError(error.message)
+          toast.dismiss(toastId);
+          toast.error(toastId, {
+            render: `Error: ${error.message}`,
+            type: 'error',
+            duration: 5000, 
+          });
+          return
+        });
+    };
   
 
   // google signup
@@ -64,7 +71,7 @@ const Signup = () => {
               alt=""
             />
           </div>
-          <h3 className="font-bold text-lg text-gray-100 text-center mt-2">Welcome To <span className="text-blue-500 font-bold">Watch Sphere</span></h3>
+          <h3 className="font-bold text-lg text-gray-300 text-center mt-2">Welcome Back To <span className="text-blue-500 font-bold">Watch Sphere</span></h3>
 
           <div className="flex justify-center mt-3">
           <button
@@ -89,17 +96,15 @@ const Signup = () => {
             <div className="w-40 h-0.5 bg-gray-200"></div>
           </div>
 
-          <form onSubmit={handleSignUp}>
+          <form onSubmit={handleLogin}>
+          {loginError?
+                <p className="bg-rose-600 p-2 rounded-lg text-white flex items-center gap-2 mb-2">
+                  <MdError></MdError> {loginError}
+                </p>
+             : 
+                ""
+              }
           <div>
-                <div className="mb-2">
-                  <p className="mb-1 font-semibold text-gray-200">Your Name</p>
-                  <input
-                    name="name"
-                    className="bg-gray-700 border border-gray-400 outline-none px-2 py-1 rounded w-full"
-                    type="text"
-                    placeholder="Rahul Sutradhar"
-                  />
-                </div>
 
                 <div className="mb-2">
                   <p className="mb-1 font-semibold text-gray-200">Your Email</p>
@@ -128,7 +133,6 @@ const Signup = () => {
                   </p>
 
                   <Link
-                    to={"/forgotPassword"}
                     className="textgray-600 font-semibold text-blue-400"
                   >
                     Forgot Password?
@@ -136,16 +140,16 @@ const Signup = () => {
                 </div>
 
                 <button className="w-full font-semibold transition duration-300 bg-gradient-to-r from-cyan-500 to-blue-500 px-4 py-2 rounded text-white mb-3">
-                  Sign Up
+                  Sign In
                 </button>
 
-                <p className="text-center text-gray-400">
-                  Already Have An Account?{" "}
+                <p className="mb-4 text-center text-gray-400">
+                  Don't Have An Account?{" "}
                   <Link
-                    to={"/signin"}
+                    to={"/signup"}
                     className="text-blue-400 font-semibold underline"
                   >
-                    Sign in
+                    Sign Up
                   </Link>
                 </p>
 
@@ -158,4 +162,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default Signin;

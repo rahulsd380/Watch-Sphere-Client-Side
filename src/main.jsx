@@ -8,6 +8,8 @@ import Home from "./Components/Home/Home.jsx";
 import TrendingMoviesDetails from "./Components/TrendingMovies/TrendingMoviesDetails.jsx";
 import Plans from "./Components/Plans/Plans.jsx";
 import AlllMovie from "./Components/AllMovie/AlllMovie.jsx";
+import Signup from './Components/Signup/Signup';
+import Signin from "./Components/Signin/SignIn.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -24,6 +26,14 @@ const router = createBrowserRouter([
       {
         path: "/allMovie",
         element : <AlllMovie></AlllMovie>
+      },
+      {
+        path: "/signup",
+        element : <Signup></Signup>
+      },
+      {
+        path: "/signin",
+        element : <Signin></Signin>
       },
       {
         path: "/trendingMoviesDetails/:id",

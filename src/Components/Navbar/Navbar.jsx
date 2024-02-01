@@ -5,8 +5,6 @@ import UserDropdown from "./UserDropdown";
 import { IoIosArrowDown } from "react-icons/io";
 import { GrLanguage } from "react-icons/gr";
 import { IoIosSearch } from "react-icons/io";
-import { IoTicket } from "react-icons/io5";
-import Signup from "../Signup/Signup";
 import MyTickets from "../MyTickets/MyTickets";
 
 const Navbar = () => {
@@ -93,9 +91,13 @@ const Navbar = () => {
               <MyTickets></MyTickets>
             </div>
 
-            <div>
-              <Signup></Signup>
-            </div>
+            <Link to={"/signup"}>
+            <button
+        className="text-white bg-gradient-to-r from-cyan-500 to-blue-500 font-semibold border-blue-400 rounded py-2 px-6"
+      >
+        Sign Up
+      </button>
+            </Link>
           </div>
         </div>
       </div>

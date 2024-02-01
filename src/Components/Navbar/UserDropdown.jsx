@@ -15,7 +15,7 @@ const UserDropdown = () => {
     logout()
       .then((result) => {
         console.log(result.user);
-        navigate("/login");
+        navigate("/signin");
       })
       .then((error) => {
         console.log(error);
@@ -41,22 +41,12 @@ const UserDropdown = () => {
       </button>
 
       {isOpen && (
-        <div className="origin-top-right absolute -right-14 mt-2 w-56 rounded-md shadow-lg bg-gradient-to-r from-slate-100 to-emerald-100 ring-1 ring-black ring-opacity-5 transition duration-300 opacity-100 border-2 border-teal-500">
+        <div className="origin-top-right absolute -right-14 mt-2 w-56 rounded-md shadow-lg bg-gray-800 transition duration-300 opacity-100 border-2 border-blue-500">
           <div className="flex flex-col px-4">
             <div className="flex justify-center border-b-2 border-blue-400 pb-2 mt-5">
               <div>
                 <div className="flex justify-center">
-                  <div className="w-10 h-10 rounded-full flex items-center justify-center bg-gradient-to-r from-emerald-300 to-emerald-500 text-gray-200 text-2xl">
-                    {user?.photoURL ? (
-                      <img
-                        className="rounded-full"
-                        src={user?.photoURL}
-                        alt=""
-                      />
-                    ) : (
-                      <FaUserCircle className="text-5xl mb-2 text-teal-500"></FaUserCircle>
-                    )}
-                  </div>
+                      <FaUserCircle className="text-5xl mb-2 text-blue-500"></FaUserCircle>
                 </div>
                 <h1 className="text-xl font-bold bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent">
                   {user?.displayName}
@@ -65,22 +55,19 @@ const UserDropdown = () => {
             </div>
 
             <Link
-              to={"/dashboard/allTasks"}
-              className="hover:text-blue-400 transition duration-300 text-gray-500 font-semibold mt-7 mb-2 border-b border-blue-900 pb-1"
+              className="hover:text-blue-400 transition duration-300 text-gray-300 font-semibold mt-7 mb-2 border-b border-blue-900 pb-1"
             >
               Dashboard
             </Link>
 
             <Link
-              to={"/userDashboard/teacherDashboard"}
-              className="hover:text-blue-400 transition duration-300 text-gray-500 font-semibold mb-2 border-b border-blue-900 pb-1"
+              className="hover:text-blue-400 transition duration-300 text-gray-300 font-semibold mb-2 border-b border-blue-900 pb-1"
             >
               View Profile
             </Link>
 
             <Link
-              to={"/userDashboard/teacherDashboard"}
-              className="hover:text-blue-400 transition duration-300 text-gray-500 font-semibold mb-2 border-b border-blue-900 pb-1"
+              className="hover:text-blue-400 transition duration-300 text-gray-300 font-semibold mb-2 border-b border-blue-900 pb-1"
             >
               Help Center
             </Link>
@@ -94,8 +81,8 @@ const UserDropdown = () => {
               </Link>
             ) : (
               <Link
-                to={"/login"}
-                className="text-teal-700 hover:text-blue-400 transition duration-300 mb-4 text-base font-semibold flex items-center gap-3"
+                to={"/signin"}
+                className="text-blue-400 hover:text-blue-400 transition duration-300 mb-4 text-base font-semibold flex items-center gap-3"
               >
                 Login <BiLogIn className="text-xl"></BiLogIn>
               </Link>
