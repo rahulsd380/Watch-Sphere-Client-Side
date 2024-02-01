@@ -92,11 +92,15 @@ const Navbar = () => {
             </div>
 
             <Link to={"/signup"}>
-            <button
-        className="text-white bg-gradient-to-r from-cyan-500 to-blue-500 font-semibold border-blue-400 rounded py-2 px-6"
-      >
-        Sign Up
-      </button>
+            {
+              user ? 
+              ""
+      : <button
+      className="text-white bg-gradient-to-r from-cyan-500 to-blue-500 font-semibold border-blue-400 rounded py-2 px-6"
+    >
+      Sign Up
+    </button>
+            }
             </Link>
           </div>
         </div>

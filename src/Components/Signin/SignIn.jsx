@@ -110,7 +110,7 @@ const Signin = () => {
                   <p className="mb-1 font-semibold text-gray-200">Your Email</p>
                   <input
                     name="email"
-                    className="bg-gray-700 border border-gray-400 outline-none px-2 py-1 rounded w-full"
+                    className="bg-gray-700 text-gray-200 border border-gray-400 outline-none px-2 py-1 rounded w-full"
                     type="email"
                     placeholder="rahul@gmail.com"
                   />
@@ -120,7 +120,7 @@ const Signin = () => {
                   <p className="mb-1 font-semibold text-gray-200">Password</p>
                   <input
                     name="password"
-                    className="bg-gray-700 border border-gray-400 outline-none px-2 py-1 rounded w-full"
+                    className="bg-gray-700 border text-gray-200 border-gray-400 outline-none px-2 py-1 rounded w-full"
                     type="password"
                     placeholder="*********"
                   />
