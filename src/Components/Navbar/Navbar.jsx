@@ -7,6 +7,7 @@ import { GrLanguage } from "react-icons/gr";
 import { IoIosSearch } from "react-icons/io";
 import { IoTicket } from "react-icons/io5";
 import Signup from "../Signup/Signup";
+import MyTickets from "../MyTickets/MyTickets";
 
 const Navbar = () => {
   const { user } = useContext(AuthContext);
@@ -89,16 +90,12 @@ const Navbar = () => {
             </div>
 
             <div className="bg-gray-600 px-2 rounded flex items-center justify-center">
-            <button>
-<IoTicket className="text-gray-300"></IoTicket>
-            </button>
+              <MyTickets></MyTickets>
             </div>
 
             <div>
               <Signup></Signup>
             </div>
-
-           
           </div>
         </div>
       </div>

@@ -7,21 +7,28 @@ import toast, { Toaster } from "react-hot-toast";
 
 
 const TicketBookingForm = ({details}) => {
+        
     const handleBookNow = () => {
         const formData = {
           movieName: details?.show?.name,
+          image: details?.show?.image?.original,
           day: details?.show?.schedule?.days[0],
           movieType: details?.show?.genres[0],
-          name: document.getElementById('name').value,
-          phone: document.getElementById('phone').value,
+          name: document.getElementById("name").value,
+          phone: document.getElementById("phone").value,
         };
     
-        // Store form data in local storage
-        localStorage.setItem('bookingData', JSON.stringify(formData));
-
-        const toastId = toast.loading("Booking..."); 
+        // Retrieve existing data from local storage
+        const existingData = JSON.parse(localStorage.getItem("bookingData"));
+    
+        // Check if existingData is an array, if not, initialize an empty array
+        const newData = Array.isArray(existingData) ? [...existingData, formData] : [formData];
+    
+        // Store the updated array back in local storage
+        localStorage.setItem("bookingData", JSON.stringify(newData));
+    
+        const toastId = toast.loading("Booking...");
         toast.success("Ticket booked successfully.", { id: toastId });
-
       };
 
 
