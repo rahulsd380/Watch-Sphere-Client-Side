@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import AuthProvider from "./Components/AuthProvider/AuthProvider.jsx";
 import Root from "./Components/Root/Root.jsx";
 import Home from "./Components/Home/Home.jsx";
+import TrendingMoviesDetails from "./Components/TrendingMovies/TrendingMoviesDetails.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -13,6 +14,12 @@ const router = createBrowserRouter([
       {
         path: "/",
         element : <Home></Home>
+      },
+      {
+        path: "/trendingMoviesDetails/:id",
+        element : <TrendingMoviesDetails></TrendingMoviesDetails>,
+        loader: () => fetch('https://api.tvmaze.com/search/shows?q=all')
+
       }
     ]
   },

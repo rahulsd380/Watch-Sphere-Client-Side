@@ -5,6 +5,7 @@ import UserDropdown from "./UserDropdown";
 import { IoIosArrowDown } from "react-icons/io";
 import { GrLanguage } from "react-icons/gr";
 import { IoIosSearch } from "react-icons/io";
+import Signup from "../Signup/Signup";
 
 const Navbar = () => {
   const { user } = useContext(AuthContext);
@@ -87,11 +88,9 @@ const Navbar = () => {
                 </div>
               </div>
 
-              <Link to={"/signup"}>
-                <button className="text-white bg-gradient-to-r from-cyan-500 to-blue-500 font-semibold border-blue-400 rounded-md py-2 px-6">
-                  Sign Up
-                </button>
-              </Link>
+                <div>
+                <Signup></Signup>
+                </div>
             </div>
         </div>
       </div>

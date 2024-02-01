@@ -36,13 +36,12 @@ const UserDropdown = () => {
       >
         <div className="text-gray-500 flex items-center gap-1 font-semibold hover:text-blue-400 transition duration-300 text-base">
           <FaRegUser></FaRegUser>
-          <p>{user?.displayName}</p>
           <IoIosArrowDown></IoIosArrowDown>
         </div>
       </button>
 
       {isOpen && (
-        <div className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-gradient-to-r from-slate-100 to-emerald-100 ring-1 ring-black ring-opacity-5 transition duration-300 opacity-100 border-2 border-teal-500">
+        <div className="origin-top-right absolute -right-14 mt-2 w-56 rounded-md shadow-lg bg-gradient-to-r from-slate-100 to-emerald-100 ring-1 ring-black ring-opacity-5 transition duration-300 opacity-100 border-2 border-teal-500">
           <div className="flex flex-col px-4">
             <div className="flex justify-center border-b-2 border-blue-400 pb-2 mt-5">
               <div>
