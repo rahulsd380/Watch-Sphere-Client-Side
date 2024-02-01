@@ -3,7 +3,7 @@
 "Watch Sphere: Streamlined movie platform for effortless exploration, detailed information, and seamless ticket booking. Elevate your movie-watching experience with our intuitive design."
 
 ## Live Link
-You can access the live version of this project here: [View Site](https://watchsphere-movie.surge.sh/https://65bbc0751d9ada24f62db36f--stellar-tanuki-4f1830.netlify.app/)
+You can access the live version of this project here: [View Site](https://65bbc0751d9ada24f62db36f--stellar-tanuki-4f1830.netlify.app/)
 
 ## Project Description
 "Watch Sphere: Your go-to movie platform for a seamless cinematic experience. Explore a diverse collection of films, access detailed information, and book tickets effortlessly. Elevate your movie-watching with Watch Sphere's intuitive design and efficient features."
