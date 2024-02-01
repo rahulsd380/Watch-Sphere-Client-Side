@@ -5,6 +5,7 @@ import UserDropdown from "./UserDropdown";
 import { IoIosArrowDown } from "react-icons/io";
 import { GrLanguage } from "react-icons/gr";
 import { IoIosSearch } from "react-icons/io";
+import { IoTicket } from "react-icons/io5";
 import Signup from "../Signup/Signup";
 
 const Navbar = () => {
@@ -87,9 +88,17 @@ const Navbar = () => {
               </div>
             </div>
 
+            <div className="bg-gray-600 px-2 rounded flex items-center justify-center">
+            <button>
+<IoTicket className="text-gray-300"></IoTicket>
+            </button>
+            </div>
+
             <div>
               <Signup></Signup>
             </div>
+
+           
           </div>
         </div>
       </div>

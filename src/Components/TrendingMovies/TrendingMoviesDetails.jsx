@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useLoaderData, useParams } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import { FaStar } from "react-icons/fa6";
+import { IoTicketSharp } from "react-icons/io5";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
@@ -15,6 +16,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import Footer from "../Footer/Footer";
+import TicketBookingForm from "../TicketBookingForm/TicketBookingForm";
 
 const TrendingMoviesDetails = () => {
   const [details, setDetails] = useState({});
@@ -96,12 +98,18 @@ const TrendingMoviesDetails = () => {
             </span>
           </p>
 
-          <p className="text-blue-500 flex items-center gap-6 text-lg mb-10">
+          <p className="text-blue-500 flex items-center gap-6 text-lg mb-5">
             Timezone:{" "}
             <span className="font-semibold text-gray-200">
               {details?.show?.network?.country?.timezone}
             </span>
           </p>
+
+          <TicketBookingForm
+          details={details}
+          >
+
+          </TicketBookingForm>
 
           <h1 className="text-2xl font-semibold text-blue-500 mb-6">Related Movies</h1>
 
