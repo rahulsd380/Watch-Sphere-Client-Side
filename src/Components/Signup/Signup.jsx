@@ -9,7 +9,7 @@ const Signup = () => {
       {/* Open the modal using document.getElementById('ID').showModal() method */}
       <button
         onClick={() => document.getElementById("my_modal_1").showModal()}
-        className="text-white bg-gradient-to-r from-cyan-500 to-blue-500 font-semibold border-blue-400 rounded-md py-2 px-6"
+        className="text-white bg-gradient-to-r from-cyan-500 to-blue-500 font-semibold border-blue-400 rounded py-2 px-6"
       >
         Sign Up
       </button>

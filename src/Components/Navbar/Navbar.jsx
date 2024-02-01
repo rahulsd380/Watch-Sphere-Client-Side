@@ -35,27 +35,27 @@ const Navbar = () => {
           <div className="hidden md:flex md:items-center md:gap-8">
             <Link
               to={"/"}
-              className="hover:text-blue-400 transition duration-300 text-gray-500 font-semibold "
+              className="hover:text-blue-400 transition duration-300 text-gray-400 font-semibold "
             >
               Home
             </Link>
             <Link
               to={"/aboutUs"}
-              className="hover:text-blue-400 transition duration-300 text-gray-500 font-semibold "
+              className="hover:text-blue-400 transition duration-300 text-gray-400 font-semibold "
             >
               About Us
             </Link>
 
             <Link
               to={"/blogs"}
-              className="hover:text-blue-400 transition duration-300 text-gray-500 font-semibold flex items-center gap-2"
+              className="hover:text-blue-400 transition duration-300 text-gray-400 font-semibold flex items-center gap-2"
             >
               Pricing Plans
               <IoIosArrowDown></IoIosArrowDown>
             </Link>
             <Link
               to="faq"
-              className="hover:text-blue-400 transition duration-300 text-gray-500 font-semibold flex items-center gap-2"
+              className="hover:text-blue-400 transition duration-300 text-gray-400 font-semibold flex items-center gap-2"
             >
               Catagories
               <IoIosArrowDown></IoIosArrowDown>
@@ -64,34 +64,33 @@ const Navbar = () => {
         </div>
 
         <div className="flex items-center">
-            <div className="hidden md:flex gap-2">
-              <div className="relative flex items-center">
-              <IoIosSearch className="absolute text-3xl "></IoIosSearch>
-                <input
-                  name="text"
-                  className="bg-white border border-gray-400 outline-none pl-7 py-2 rounded w-full"
-                  type="text"
-                  placeholder="Movies, Series"
-                />
-              </div>
-              <div className="flex items-center text-gray-500">
-                <GrLanguage className="text-xl"></GrLanguage>
-                <select>
-                  <option value="eng">Eng</option>
-                  <option value="ban">Ban</option>
-                  <option value="chi">Chi</option>
-                </select>
-
-
-                <div>
-                  <UserDropdown></UserDropdown>
-                </div>
-              </div>
-
-                <div>
-                <Signup></Signup>
-                </div>
+          <div className="hidden md:flex gap-2">
+            <div className="relative flex items-center">
+              <IoIosSearch className="absolute text-3xl text-gray-400 ml-1"></IoIosSearch>
+              <input
+                name="text"
+                className="bg-gray-700 border border-gray-600 text-gray-200 outline-none pl-9 py-2 rounded w-full"
+                type="text"
+                placeholder="Movies, Series"
+              />
             </div>
+            <div className="flex items-center text-gray-500 bg-gray-600 px-2 rounded">
+              <GrLanguage className="text-xl text-gray-300"></GrLanguage>
+              <select className="bg-gray-600 text-gray-300">
+                <option value="eng">Eng</option>
+                <option value="ban">Ban</option>
+                <option value="chi">Chi</option>
+              </select>
+
+              <div>
+                <UserDropdown></UserDropdown>
+              </div>
+            </div>
+
+            <div>
+              <Signup></Signup>
+            </div>
+          </div>
         </div>
       </div>
     </div>

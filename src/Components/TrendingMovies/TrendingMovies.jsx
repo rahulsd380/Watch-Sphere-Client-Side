@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaStar } from "react-icons/fa6";
+import { FaArrowRightToBracket } from "react-icons/fa6";
+
 
 const TrendingMovies = () => {
   const [allMovies, setAllMovies] = useState([]);
@@ -14,9 +16,13 @@ const TrendingMovies = () => {
   }, [url]);
   return (
     <div className="max-w-7xl mx-auto py-20">
-      <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-6">
+      <div className="flex items-center justify-between mb-6">
+      <h1 className="text-2xl font-semibold text-gray-200">Trending Movies</h1>
+      <h1 className=" text-gray-200 flex items-center gap-2 hover:text-blue-500 transition duration-300 cursor-pointer">View All  <FaArrowRightToBracket></FaArrowRightToBracket></h1>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
         {allMovies.map((movie) => (
-          <Link to={`/trendingMoviesDetails/${movie.show.id}`} key={movie.show.id}>
+          <Link className="hover:scale-105 transition-transform" to={`/trendingMoviesDetails/${movie.show.id}`} key={movie.show.id}>
             {/* <img
               src={movie.show.image ? movie.show.image.original : ""}
               alt=""
@@ -33,7 +39,7 @@ const TrendingMovies = () => {
             <p className="text-white text-xs mt-2">{movie.show.genres}</p>
           </Link>
         ))}
-        
+       
       </div>
     </div>
   );

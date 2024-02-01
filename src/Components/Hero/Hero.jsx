@@ -24,7 +24,7 @@ const Hero = () => {
             <div className="px-20 py-9 grid md:grid-cols-2 gap-10 items-center">
               <div>
                 <p className="text-blue-400 mb-7">Motivational Movie</p>
-                <h1 className="text-gray-50 font-bold text-6xl mb-3 bg-gradient-to-br from-yellow-300  to-red-600 bg-clip-text text-transparent dark:text-orange-500">
+                <h1 className="text-gray-50 font-bold text-6xl mb-3 bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent dark:text-orange-500">
                   12th Fail - Restart
                 </h1>
 
@@ -54,7 +54,7 @@ const Hero = () => {
                 <div className="flex gap-10 mt-10">
 
                 <button
-                    className="rounded-lg focus:outline-none h-12 px-5 bg-gradient-to-br from-yellow-300  to-red-600 text-white font-semibold flex items-center gap-2"
+                    className="rounded-lg focus:outline-none h-12 px-5 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold flex items-center gap-2"
                   >
                     Play Now
                     <FaPlayCircle className="text-2xl"></FaPlayCircle>

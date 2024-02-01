@@ -34,7 +34,7 @@ const UserDropdown = () => {
         className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium "
         onClick={toggleDropdown}
       >
-        <div className="text-gray-500 flex items-center gap-1 font-semibold hover:text-blue-400 transition duration-300 text-base">
+        <div className="text-gray-300 flex items-center gap-1 font-semibold hover:text-blue-400 transition duration-300 text-base">
           <FaRegUser></FaRegUser>
           <IoIosArrowDown></IoIosArrowDown>
         </div>
