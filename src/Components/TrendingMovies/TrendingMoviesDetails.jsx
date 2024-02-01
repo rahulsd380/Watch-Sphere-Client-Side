@@ -14,6 +14,7 @@ import "swiper/css/navigation";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import Footer from "../Footer/Footer";
 
 const TrendingMoviesDetails = () => {
   const [details, setDetails] = useState({});
@@ -43,15 +44,17 @@ const TrendingMoviesDetails = () => {
   return (
     <div>
       <Navbar></Navbar>
-      <div className="max-w-7xl mx-auto py-10 grid grid-cols-3 gap-10">
+      <div className="max-w-7xl mx-auto py-10 grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div className="">
         <img
-          className="h-screen mb-2 rounded-md"
+          className="h-screen w-full mb-0 md:mb-2 rounded-md"
           src={
             details?.show?.image ? details?.show?.image?.original : "No Image"
           }
           alt=""
         />
-        <div className="col-span-2">
+        </div>
+        <div className="col-span-2 px-5">
           <div className="flex items-center gap-10 mb-3">
             <h1 className="text-white text-3xl font-bold">
               {details?.show?.name}
@@ -127,7 +130,7 @@ const TrendingMoviesDetails = () => {
       >
         {/* Your movie card content here */}
         <img
-          className="w-60 h-72 mb-2 rounded-md"
+          className="w-35 md:w-60 h-44 md:h-72 mb-2 rounded-md"
           src={
             movie.show.image
               ? movie.show.image.original
@@ -148,6 +151,7 @@ const TrendingMoviesDetails = () => {
 
         </div>
       </div>
+      <Footer></Footer>
     </div>
   );
 };

@@ -16,20 +16,20 @@ const Hero = () => {
         className="absolute inset-0 w-full h-full object-cover"
         src={bgVideo}
       ></video>
-      <div className="absolute inset-0 bg-black opacity-60"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-slate-900 to-slate-700 opacity-60"></div>
       <div className="relative z-10">
 
         <div className="w-full h-screen flex items-center">
           <div className="  ">
-            <div className="px-20 py-9 grid md:grid-cols-2 gap-10 items-center">
+            <div className="px-5 md:px-20 py-5 md:py-9 grid md:grid-cols-2 gap-10 items-center">
               <div>
                 <p className="text-blue-400 mb-7">Motivational Movie</p>
-                <h1 className="text-gray-50 font-bold text-6xl mb-3 bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent dark:text-orange-500">
+                <h1 className="text-gray-50 font-bold text-6xl mb-3 bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent">
                   12th Fail - Restart
                 </h1>
 
 
-                <div className="flex items-center gap-8 mt-7">
+                <div className="flex items-center gap-8 mt-3">
                 <p className="flex items-center gap-2 text-white">
                     <CiStar className="text-blue-300"></CiStar>
                     5.0

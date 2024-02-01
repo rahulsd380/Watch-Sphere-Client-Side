@@ -2,7 +2,7 @@ import { IoCloudDoneSharp } from "react-icons/io5";
 
 const Plans = () => {
     return (
-       <div className="max-w-7xl mx-auto">
+       <div className="max-w-7xl mx-auto bg-gray-800 rounded-lg shadow-inner p-5 mb-10">
         <h1 className="text-3xl font-semibold text-blue-400 text-center mb-1">View Our Plans</h1>
         <p className="text-gray-400 text-center">Discover tailored solutions for every need. Click 'View Our Plans' to explore <br /> and choose the perfect option for you.</p>
          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 px-5 md:px-20">

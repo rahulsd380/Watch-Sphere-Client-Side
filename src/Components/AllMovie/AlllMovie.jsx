@@ -2,9 +2,12 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaStar } from "react-icons/fa6";
 import { FaArrowRightToBracket } from "react-icons/fa6";
+import { IoIosArrowDown } from "react-icons/io";
+import Navbar from "../Navbar/Navbar";
+import Footer from "../Footer/Footer";
 
 
-const TrendingMovies = () => {
+const AlllMovie = () => {
   const [allMovies, setAllMovies] = useState([]);
   console.log(allMovies);
   const url = "https://api.tvmaze.com/search/shows?q=all";
@@ -15,10 +18,18 @@ const TrendingMovies = () => {
       .then((data) => setAllMovies(data));
   }, [url]);
   return (
-    <div className="max-w-7xl mx-auto py-20">
+    <div>
+        <Navbar></Navbar>
+        <div className="max-w-7xl mx-auto py-20">
       <div className="flex items-center justify-between mb-6">
-      <h1 className="text-2xl font-semibold text-gray-200">Trending Movies</h1>
-      <h1 className=" text-gray-200 flex items-center gap-2 hover:text-blue-500 transition duration-300 cursor-pointer">View All  <FaArrowRightToBracket></FaArrowRightToBracket></h1>
+      <h1 className="text-2xl font-semibold text-gray-200">View All Movies</h1>
+      <button
+              to="faq"
+              className="hover:text-blue-400 transition duration-300 text-gray-400 font-semibold flex items-center gap-2"
+            >
+              Catagories
+              <IoIosArrowDown></IoIosArrowDown>
+            </button>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
         {allMovies.map((movie) => (
@@ -42,7 +53,9 @@ const TrendingMovies = () => {
        
       </div>
     </div>
+    <Footer></Footer>
+    </div>
   );
 };
 
-export default TrendingMovies;
+export default AlllMovie;

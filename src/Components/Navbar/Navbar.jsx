@@ -27,7 +27,7 @@ const Navbar = () => {
           <div className="">
             <img
               className="w-32"
-              src="https://i.ibb.co/w6FkzdF/logo.png"
+              src="https://i.ibb.co/s3nY4Nv/logo.png"
               alt=""
             />
           </div>
@@ -40,32 +40,32 @@ const Navbar = () => {
               Home
             </Link>
             <Link
-              to={"/aboutUs"}
+              to={"/"}
               className="hover:text-blue-400 transition duration-300 text-gray-400 font-semibold "
             >
               About Us
             </Link>
 
             <Link
-              to={"/blogs"}
+              to={"/plans"}
               className="hover:text-blue-400 transition duration-300 text-gray-400 font-semibold flex items-center gap-2"
             >
               Pricing Plans
               <IoIosArrowDown></IoIosArrowDown>
             </Link>
             <Link
-              to="faq"
+              to="/allMovie"
               className="hover:text-blue-400 transition duration-300 text-gray-400 font-semibold flex items-center gap-2"
             >
-              Catagories
+              All Movie
               <IoIosArrowDown></IoIosArrowDown>
             </Link>
           </div>
         </div>
 
         <div className="flex items-center">
-          <div className="hidden md:flex gap-2">
-            <div className="relative flex items-center">
+          <div className="flex gap-2">
+            <div className="hidden relative md:flex items-center">
               <IoIosSearch className="absolute text-3xl text-gray-400 ml-1"></IoIosSearch>
               <input
                 name="text"
@@ -74,7 +74,7 @@ const Navbar = () => {
                 placeholder="Movies, Series"
               />
             </div>
-            <div className="flex items-center text-gray-500 bg-gray-600 px-2 rounded">
+            <div className="hidden md:flex items-center text-gray-500 bg-gray-600 px-2 rounded">
               <GrLanguage className="text-xl text-gray-300"></GrLanguage>
               <select className="bg-gray-600 text-gray-300">
                 <option value="eng">Eng</option>

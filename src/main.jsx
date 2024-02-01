@@ -6,6 +6,8 @@ import AuthProvider from "./Components/AuthProvider/AuthProvider.jsx";
 import Root from "./Components/Root/Root.jsx";
 import Home from "./Components/Home/Home.jsx";
 import TrendingMoviesDetails from "./Components/TrendingMovies/TrendingMoviesDetails.jsx";
+import Plans from "./Components/Plans/Plans.jsx";
+import AlllMovie from "./Components/AllMovie/AlllMovie.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -14,6 +16,14 @@ const router = createBrowserRouter([
       {
         path: "/",
         element : <Home></Home>
+      },
+      {
+        path: "/plans",
+        element : <Plans></Plans>
+      },
+      {
+        path: "/allMovie",
+        element : <AlllMovie></AlllMovie>
       },
       {
         path: "/trendingMoviesDetails/:id",

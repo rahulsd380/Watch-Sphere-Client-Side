@@ -17,7 +17,7 @@ import {
             <aside>
               <img
                 className="w-40"
-                src="https://i.ibb.co/w6FkzdF/logo.png"
+                src="https://i.ibb.co/s3nY4Nv/logo.png"
                 alt=""
               />
               <p className=" font-semibold">

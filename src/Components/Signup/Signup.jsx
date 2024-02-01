@@ -26,11 +26,11 @@ const Signup = () => {
         <div className="flex justify-center">
             <img
               className="w-32"
-              src="https://i.ibb.co/w6FkzdF/logo.png"
+              src="https://i.ibb.co/M5YDjf1/favIcon.png"
               alt=""
             />
           </div>
-          <h3 className="font-bold text-lg text-center mt-2">Welcome To <span className="text-rose-600 font-bold">Watch Sphere</span></h3>
+          <h3 className="font-bold text-lg text-center mt-2">Welcome To <span className="text-blue-500 font-bold">Watch Sphere</span></h3>
 
           <div className="flex justify-center mt-3">
           <button
