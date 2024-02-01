@@ -21,7 +21,7 @@ const Hero = () => {
 
         <div className="w-full h-screen flex items-center">
           <div className="  ">
-            <div className="px-5 md:px-20 py-5 md:py-9 grid md:grid-cols-2 gap-10 items-center">
+            <div className="px-5 md:px-10 lg:px-20 py-5 md:py-10 lg:py-9 grid md:grid-cols-2 gap-10 items-center">
               <div>
                 <p className="text-blue-400 mb-7">Motivational Movie</p>
                 <h1 className="text-gray-50 font-bold text-6xl mb-3 bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent">

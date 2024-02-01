@@ -65,7 +65,7 @@ const Navbar = () => {
 
         <div className="flex items-center">
           <div className="flex gap-2">
-            <div className="hidden relative md:flex items-center">
+            <div className="hidden relative md:hidden lg:flex items-center">
               <IoIosSearch className="absolute text-3xl text-gray-400 ml-1"></IoIosSearch>
               <input
                 name="text"
@@ -74,7 +74,7 @@ const Navbar = () => {
                 placeholder="Movies, Series"
               />
             </div>
-            <div className="hidden md:flex items-center text-gray-500 bg-gray-600 px-2 rounded">
+            <div className="hidden md:hidden lg:flex items-center text-gray-500 bg-gray-600 px-2 rounded">
               <GrLanguage className="text-xl text-gray-300"></GrLanguage>
               <select className="bg-gray-600 text-gray-300">
                 <option value="eng">Eng</option>
@@ -91,7 +91,7 @@ const Navbar = () => {
               <MyTickets></MyTickets>
             </div>
 
-            <Link to={"/signup"}>
+            <Link className="flex md:hidden lg:flex" to={"/signup"}>
             {
               user ? 
               ""
